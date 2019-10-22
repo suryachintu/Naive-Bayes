@@ -155,7 +155,7 @@ print("Number of mislabeled points out of a total %d points : %d"
 Number of mislabeled points out of a total 150 points : 6
 
 
-For ris dataset only 6 datapoints are misclassified.
+For Iris dataset only 6 datapoints are misclassified.
 
 ### 5. Laplace Correction
 
