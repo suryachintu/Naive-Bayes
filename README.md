@@ -29,9 +29,9 @@ Naive Bayes algorithm makes an assumption that the input features of the datset 
 
 Conditional probability is defined as the likelihood of an event or outcome occurring, based on the occurrence of a previous event or outcome. For example the conditional probability of an event B is the probability that the event will occur given the knowledge that an event A has already occurred and it is denoted by P(B|A) probablity of B given A. 
 
-$$
+\begin{equation}
 P(B|A) = \frac{P(A \cap B)}{P(A)}
-$$
+\end{equation}
 
 **Example**
 
@@ -46,9 +46,10 @@ Lets take a look at the below table.
 In the above table we have 10 male teachers and 15 female teachers and 100 male students and 90 female students. Suppose we need find probality of member being a teacher given that the member is male.
 
 
-$$
+\begin{equation}
 P(Teacher|Male) = \frac{P(Male \cap Teacher)}{P(Male)} = \frac{10} {120} = 0.0833
-$$
+\end{equation}
+
 
 ### 3. Bayes Theorem
 
@@ -56,22 +57,23 @@ The Bayes theorem describes the probability of an event based on the prior knowl
 
 Conditional probablity of B given A is
 
-$$
+\begin{equation}
 P(B|A) = \frac {P(A \cap B)}{P(A)}
-$$
+\end{equation}
 
-$$
+\begin{equation}
 P(A|B) = \frac {P(A \cap B)}{P(B)}
-$$
+\end{equation}
 
-$$
+\begin{equation}
 P(A \cap B) = P(A|B) * P(B) = P(B|A) * P(A)
-$$
+\end{equation}
 
 
-$$
+\begin{equation}
 P(B|A) = P(A|B) * \frac {P(B)}{P(A)}
-$$
+\end{equation}
+
 
 **Example**
 
@@ -99,12 +101,13 @@ Therefore we can find P(Yes) as P(Yes) = 1% × 80% + 99% × 10% = 10.7%
 
 We need to find probablity of Jhon will have allergy given that the test is "Yes".
 
-$$
+\begin{equation}
 P(Allergy|Yes) = P(Yes|Allergy) * \frac {P(Allergy)}{P(Yes)}
-$$
+\end{equation}
 
-$$
+
+\begin{equation}
 P(Allergy|Yes) = \frac{0.01 * 0.8 }{10.7} = 0.0748
-$$
+\end{equation}
 
 ### 4. Naive Bayes Sample Code
