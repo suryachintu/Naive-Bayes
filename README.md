@@ -94,7 +94,7 @@ If 1% of the population have the allergy, and Jhon's test says "Yes", what are t
 
 P(Allergy) is Probability of Allergy = 1%
 
-P(Yes|Allergy) is probability of test saying "Yes" for people with allergy = 0.8 (80%)
+P(Yes/Allergy) is probability of test saying "Yes" for people with allergy = 0.8 (80%)
 
 1% have the allergy, and the test says "Yes" to 80% of them
 
