@@ -27,7 +27,7 @@ Naive Bayes algorithm makes an assumption that the input features of the datset 
 
 ### 2. Conditional Probability
 
-Conditional probability is defined as the likelihood of an event or outcome occurring, based on the occurrence of a previous event or outcome. For example the conditional probability of an event B is the probability that the event will occur given the knowledge that an event A has already occurred and it is denoted by P(B|A) probablity of B given A. 
+Conditional probability is defined as the likelihood of an event or outcome occurring, based on the occurrence of a previous event or outcome. For example the conditional probability of an event B is the probability that the event will occur given the knowledge that an event A has already occurred and it is denoted by P(B/A) probablity of B given A. 
 
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;P(B|A) = \frac{P(A \cap B)}{P(A)}"/>
 
