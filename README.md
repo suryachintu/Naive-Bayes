@@ -155,7 +155,7 @@ print("Number of mislabeled points out of a total %d points : %d"
 Number of mislabeled points out of a total 150 points : 6
 
 
-For Iris dataset only 6 datapoints are misclassified.
+For ris dataset only 6 datapoints are misclassified.
 
 ### 5. Laplace Correction
 
@@ -180,6 +180,10 @@ The conditional probality works fine for all the data which have some frequency 
 1. Text classification/ Spam Filtering/ Sentiment Analysis
 2. Recommendation System: Naive Bayes Classifier and Collaborative Filtering together builds a Recommendation System that uses machine learning and data mining techniques to filter unseen information and predict whether a user would like a given resource or not.
 
-### 8. Tips to improve the power of Naive Bayes Model
+### 8. Tips and Tricks
 1. For Gaussian Naive Bayes the input features should have a Gaussian distribution if the features don't have normal distribution then we need to add make tranformations to make it follow normal distribution.
 2. Handling zero conditional probabilty by using Laplace smoothing.
+
+### 9. References
+1. https://www.appliedaicourse.com/course/11/Applied-Machine-learning-course
+2. https://machinelearningmastery.com/naive-bayes-for-machine-learning/
