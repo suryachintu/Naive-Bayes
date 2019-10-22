@@ -124,7 +124,7 @@ We will work Iris datset available in scikit-learn library. But sklearn provides
 
 <b>Which one to use??</b>
 
-It completely on input features of the dataset we deal. In our case the dataset is iris dataset.
+It completely depends on input features of the dataset we deal. In our case the dataset is iris dataset.
 
 We can use Gaussian Naive Bayes because it assumes that features follow a normal distribution. Multinomial is used incase of if the features have discreate counts. Binomial Naive Bayes is useful if features contain binary values.
 
