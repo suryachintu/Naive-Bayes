@@ -49,7 +49,7 @@ In the above table we have 10 male teachers and 15 female teachers and 100 male 
 
 ### 3. Bayes Theorem
 
-The Bayes theorem describes the probability of an event based on the prior knowledge of the conditions that might be related to the event. In simple way suppose P(A) is the probablity of event A happens and P(B) is the probablity of event B happens suppose if we know the conditional probability P(B|A), then we can use the bayes rule to find out the P(A|B) .
+The Bayes theorem describes the probability of an event based on the prior knowledge of the conditions that might be related to the event. In simple way suppose P(A) is the probablity of event A happens and P(B) is the probablity of event B happens suppose if we know the conditional probability P(B/A), then we can use the bayes rule to find out the P(A/B) .
 
 Conditional probablity of B given A is
 
