@@ -1,37 +1,110 @@
-## Welcome to GitHub Pages
+## Intoduction to Naive Bayes for Classification
 
-You can use the [editor on GitHub](https://github.com/suryachintu/Naive-Bayes/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+This blog post is about understanding Naive Bayes algorithm for classification tasks.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+The tutorial is divided into the following parts.
 
-```markdown
-Syntax highlighted code block
+1. Introduction
+2. Conditional Probability
+3. Bayes Theorem
+4. Naive Bayes Sample Code
+5. Laplace Correction
+6. Advantages and Disadvantages
+7. Applications of Naive Bayes Algorithm
+8. Tips to improve the power of Naive Bayes Model
+9. References
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+### 1. Introduction
 
-1. Numbered
-2. List
+Naive Bayes classiffier is a probablistic machine learning model that’s used for classification tasks. Assume that we have a situation that we have made features out of a given dataset and the dataset is very large dataset we need a to create some basic machine learning model for this dataset and use it as baseline model to compare benchmarks with other classification models, in this case the best option is to use Naive Bayes classifier. Its extremely fast compared to any other model available and has an training time complexity of *O(Nd)* where N is the number of training examples and d is the dimensionality of the dataset or number of input features. 
 
-**Bold** and _Italic_ and `Code` text
+So why the algorithm is called **Naive**?
 
-[Link](url) and ![Image](src)
-```
+Naive Bayes algorithm makes an assumption that the input features of the datset that is used for model are independent of each other.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### 2. Conditional Probability
 
-### Jekyll Themes
+Conditional probability is defined as the likelihood of an event or outcome occurring, based on the occurrence of a previous event or outcome. For example the conditional probability of an event B is the probability that the event will occur given the knowledge that an event A has already occurred and it is denoted by P(B|A) probablity of B given A. 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/suryachintu/Naive-Bayes/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+$$
+P(B|A) = \frac{P(A \cap B)}{P(A)}
+$$
 
-### Support or Contact
+**Example**
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Lets take a look at the below table.
+
+|           | Male | Female | Total |
+|-----------|------|--------|-------|
+| Teachers  | 10   | 15     | 25    |
+| Students  | 110  | 90     | 200   |
+| Total     | 120  | 105    | 225   |
+
+In the above table we have 10 male teachers and 15 female teachers and 100 male students and 90 female students. Suppose we need find probality of member being a teacher given that the member is male.
+
+
+$$
+P(Teacher|Male) = \frac{P(Male \cap Teacher)}{P(Male)} = \frac{10} {120} = 0.0833
+$$
+
+### 3. Bayes Theorem
+
+The Bayes theorem describes the probability of an event based on the prior knowledge of the conditions that might be related to the event. In simple way suppose P(A) is the probablity of event A happens and P(B) is the probablity of event B happens suppose if we know the conditional probability P(B|A), then we can use the bayes rule to find out the P(A|B) .
+
+Conditional probablity of B given A is
+
+$$
+P(B|A) = \frac {P(A \cap B)}{P(A)}
+$$
+
+$$
+P(A|B) = \frac {P(A \cap B)}{P(B)}
+$$
+
+$$
+P(A \cap B) = P(A|B) * P(B) = P(B|A) * P(A)
+$$
+
+
+$$
+P(B|A) = P(A|B) * \frac {P(B)}{P(A)}
+$$
+
+**Example**
+
+Jhon says he is itchy. There is a test for Allergy to humans, but this test is not always right
+
+For people that really do have the allergy, the test says "Yes" 80% of the time.
+
+For people that do not have the allergy, the test says "Yes" 10% of the time ("false positive").
+
+If 1% of the population have the allergy, and Jhon's test says "Yes", what are the chances that Jhon really has the allergy?
+
+<b>Given</b>
+
+P(Allergy) is Probability of Allergy = 1%
+
+P(Yes|Allergy) is probability of test saying "Yes" for people with allergy = 0.8 (80%)
+
+1% have the allergy, and the test says "Yes" to 80% of them
+
+99% do not have the allergy and the test says "Yes" to 10% of them
+
+Therefore we can find P(Yes) as P(Yes) = 1% × 80% + 99% × 10% = 10.7%
+
+<b>What do we need to find?</b>
+
+We need to find probablity of Jhon will have allergy given that the test is "Yes".
+
+$$
+P(Allergy|Yes) = P(Yes|Allergy) * \frac {P(Allergy)}{P(Yes)}
+$$
+
+$$
+P(Allergy|Yes) = \frac{0.01 * 0.8 }{10.7} = 0.0748
+$$
+
+### 4. Naive Bayes Sample Code
