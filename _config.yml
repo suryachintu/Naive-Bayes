@@ -1,5 +1,6 @@
 theme: jekyll-theme-cayman
 markdown: kramdown
-is_project_page:
+github:
+  is_project_page: false
 kramdown:
     math_engine: katex
